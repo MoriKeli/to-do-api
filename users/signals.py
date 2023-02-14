@@ -5,7 +5,7 @@ from .models import UserProfile, Tasks
 import uuid
 
 
-@reciever(pre_save, sender=User)
+@receiver(pre_save, sender=User)
 def generate_userProfile_ID(sender, instance, **kwargs):
     if instance.id == "":
         instance.id = str(uuid.uuid4()).replace('-', '')[:18]
