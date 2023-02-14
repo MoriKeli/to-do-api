@@ -1,10 +1,5 @@
 from rest_framework import serializers
-from .models import UserProfile, Tasks
-
-
-class UserProfileSerializer(serializers.ModelSerializer):
-    model = UserProfile
-    fields = ['gender', 'phone_no', 'country', 'profile_pic']
+from .models import Tasks
 
 class TasksSerializer(serializers.ModelSerializer):
     class Meta:
