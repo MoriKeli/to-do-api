@@ -8,8 +8,8 @@ from .models import Tasks
 @api_view(['GET', 'POST'])
 def schedule_task_view(request):
     if request.method == 'GET':
-        scheduled_task = get_object_or_404(Tasks)
-        serializer = TasksSerializer(scheduled_task)
+        scheduled_task = Tasks.objects.all()
+        serializer = TasksSerializer(scheduled_task, many=True)
         
         return Response(serializer.data)
 
