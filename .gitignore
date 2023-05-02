@@ -10,6 +10,3 @@
 # binary files
 *__pycache__
 
-# migrations
-*migrations
-
