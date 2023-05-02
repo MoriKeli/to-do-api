@@ -1,0 +1,15 @@
+# virtualenv
+*venv
+
+# environment variables
+*env
+
+# db file
+*sqlite3
+
+# binary files
+*__pycache__
+
+# migrations
+*migrations
+
